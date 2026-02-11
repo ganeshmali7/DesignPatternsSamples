@@ -1,0 +1,14 @@
+C:\Users\Dell\OneDrive\Desktop\CSharp\DesignPatternsSamples\bin\Debug\net8.0\DesignPatternsSamples.exe
+C:\Users\Dell\OneDrive\Desktop\CSharp\DesignPatternsSamples\bin\Debug\net8.0\DesignPatternsSamples.deps.json
+C:\Users\Dell\OneDrive\Desktop\CSharp\DesignPatternsSamples\bin\Debug\net8.0\DesignPatternsSamples.runtimeconfig.json
+C:\Users\Dell\OneDrive\Desktop\CSharp\DesignPatternsSamples\bin\Debug\net8.0\DesignPatternsSamples.dll
+C:\Users\Dell\OneDrive\Desktop\CSharp\DesignPatternsSamples\bin\Debug\net8.0\DesignPatternsSamples.pdb
+C:\Users\Dell\OneDrive\Desktop\CSharp\DesignPatternsSamples\obj\Debug\net8.0\DesignPatternsSamples.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dell\OneDrive\Desktop\CSharp\DesignPatternsSamples\obj\Debug\net8.0\DesignPatternsSamples.AssemblyInfoInputs.cache
+C:\Users\Dell\OneDrive\Desktop\CSharp\DesignPatternsSamples\obj\Debug\net8.0\DesignPatternsSamples.AssemblyInfo.cs
+C:\Users\Dell\OneDrive\Desktop\CSharp\DesignPatternsSamples\obj\Debug\net8.0\DesignPatternsSamples.csproj.CoreCompileInputs.cache
+C:\Users\Dell\OneDrive\Desktop\CSharp\DesignPatternsSamples\obj\Debug\net8.0\DesignPatternsSamples.dll
+C:\Users\Dell\OneDrive\Desktop\CSharp\DesignPatternsSamples\obj\Debug\net8.0\refint\DesignPatternsSamples.dll
+C:\Users\Dell\OneDrive\Desktop\CSharp\DesignPatternsSamples\obj\Debug\net8.0\DesignPatternsSamples.pdb
+C:\Users\Dell\OneDrive\Desktop\CSharp\DesignPatternsSamples\obj\Debug\net8.0\DesignPatternsSamples.genruntimeconfig.cache
+C:\Users\Dell\OneDrive\Desktop\CSharp\DesignPatternsSamples\obj\Debug\net8.0\ref\DesignPatternsSamples.dll
