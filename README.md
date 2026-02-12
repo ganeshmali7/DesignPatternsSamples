@@ -56,13 +56,4 @@
 
 ````
 # Simple Demos: DRY, KISS, OOD & SOLID
-
-Small interactive .NET console app that shows short examples for DRY, KISS, basic OOD, and each SOLID principle.  
-Run the app and enter a menu number to execute a demo.
-
-## Run
-From the project root (where `Program.cs` is):
-```bash
-dotnet build
-dotnet run
 ````
