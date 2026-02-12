@@ -1,7 +1,3 @@
----
-
-## This project has
-
 ### 1. DRY (Don't Repeat Yourself)
 
 * **DRY_Violated.cs** — [https://github.com/ganarm/DesignPatternsSamples/blob/main/DesignPatternsSamples/KISSAndDRY/DRY_Violated.cs](https://github.com/ganarm/DesignPatternsSamples/blob/main/DesignPatternsSamples/KISSAndDRY/DRY_Violated.cs)
