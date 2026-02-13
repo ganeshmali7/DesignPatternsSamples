@@ -3,6 +3,7 @@
 namespace DesignPatternsSamples.SOLID
 {
     // LSP Violated
+    // Here Penguin not able to fly still need to override the Fly() method which violates the property of Liskov's Principle
     public static class LSP_Violated
     {
         public static void Run()
