@@ -3,6 +3,7 @@
 namespace DesignPatternsSamples.SOLID
 {
     // DIP Violated
+    // High level module should not tighly coupled with Low level module
     public static class DIP_Violated
     {
         public static void Run()
