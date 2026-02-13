@@ -2,52 +2,42 @@
 
 namespace DesignPatternsSamples.OOD
 {
-    // EncapsulationExample.cs
-    // Tiny human story: Raj opens a bank account and uses deposit/withdraw safely.
+    // Encapsulation
     public static class EncapsulationExample
     {
         public static void Run()
         {
-            Console.WriteLine("Encapsulation — Raj's bank account (safe access)");
-            Console.WriteLine("------------------------------------------------");
+            var account = new BankAccount(500);
+            Console.WriteLine("Initial balance: "+account.GetBalance()+" rs");
 
-            var account = new BankAccount(500m); // starting balance
-            Console.WriteLine($"Starting balance: {account.GetBalance()} rupees");
+            account.Deposit(200);
+            Console.WriteLine("Balance after deposit: "+account.GetBalance()+" rs");
 
-            Console.WriteLine("Raj deposits 200 rupees...");
-            account.Deposit(200m);
-            Console.WriteLine($"Balance now: {account.GetBalance()} rupees");
+            bool ok = account.Withdraw(800);
+            Console.WriteLine(ok ? "Withdrawal successful." : "Withdraw fail (insufficient balance).");
+            Console.WriteLine("Final balance: "+account.GetBalance()+" rs");
 
-            Console.WriteLine("Raj tries to withdraw 800 rupees...");
-            bool ok = account.Withdraw(800m);
-            Console.WriteLine(ok ? "Withdrawal succeeded." : "Withdrawal failed (insufficient funds).");
-            Console.WriteLine($"Final balance: {account.GetBalance()} rupees");
-
-            Console.WriteLine();
-            Console.WriteLine("Note: Balance is private and can only be changed via Deposit/Withdraw — that's encapsulation.");
         }
     }
 
-    // Simple bank account: internal state is private and protected by methods.
     public class BankAccount
     {
-        private decimal _balance;
+        private int _balance;
 
-        public BankAccount(decimal initialBalance = 0m)
+        public BankAccount(int initialBalance)
         {
             if (initialBalance < 0) initialBalance = 0;
             _balance = initialBalance;
         }
 
-        public void Deposit(decimal amount)
+        public void Deposit(int amount)
         {
             if (amount <= 0) return;
             _balance += amount;
         }
 
-        public bool Withdraw(decimal amount)
+        public bool Withdraw(int amount)
         {
-            if (amount <= 0) return false;
             if (amount > _balance) return false;
             _balance -= amount;
             return true;

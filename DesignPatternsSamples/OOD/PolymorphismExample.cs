@@ -2,28 +2,15 @@
 
 namespace DesignPatternsSamples.OOD
 {
-    // PolymorphismExample.cs
-    // Tiny human story: system sends different notifications but uses the same code to call them.
+    // Polymorphism
     public static class PolymorphismExample
     {
         public static void Run()
         {
-            Console.WriteLine("Polymorphism — send notifications (Email & SMS)");
-            Console.WriteLine("-----------------------------------------------");
-
-            Notification[] notifiers = new Notification[]
-            {
-                new EmailNotification(),
-                new SmsNotification()
-            };
-
-            foreach (var n in notifiers)
-            {
-                n.Send("user@example.com", "Hello! This is a polymorphism demo.");
-            }
-
-            Console.WriteLine();
-            Console.WriteLine("Note: Code treats different notification types the same way — that's polymorphism.");
+            Notification email = new EmailNotification();
+            email.Send("ganesh.mali@microlise.com", "Hi, How are yuo.");
+            Notification sms = new SmsNotification();
+            sms.Send("9021817579", "Hi, How are yuo.");
         }
     }
 
@@ -36,7 +23,7 @@ namespace DesignPatternsSamples.OOD
     {
         public override void Send(string to, string message)
         {
-            Console.WriteLine($"[Email] To: {to}  Message: {message}");
+            Console.WriteLine("Email To: "+to+"\nMessage:"+message);
         }
     }
 
@@ -44,7 +31,7 @@ namespace DesignPatternsSamples.OOD
     {
         public override void Send(string to, string message)
         {
-            Console.WriteLine($"[SMS]   To: {to}  Message: {message}");
+            Console.WriteLine("SMS To: "+to+"\nMessage:"+message);
         }
     }
 }

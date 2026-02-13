@@ -2,51 +2,61 @@
 
 namespace DesignPatternsSamples.OOD
 {
-    // InheritanceExample.cs
-    // Tiny human story: factory has vehicles, some are cars, some are trucks.
+    // Inheritance
     public static class InheritanceExample
     {
         public static void Run()
         {
-            Console.WriteLine("Inheritance — factory vehicles (Car and Truck share Vehicle)");
-            Console.WriteLine("-----------------------------------------------------------");
+            Vehicle car = new Car(4, "Honda", "102");
+            Vehicle truck = new Truck(4500, "TATA", "504");
 
-            Vehicle[] garage = new Vehicle[]
-            {
-                new Car { Make = "Honda", Model = "City", DoorCount = 4 },
-                new Truck { Make = "Tata", Model = "407", PayloadKg = 1200 }
-            };
-
-            foreach (var v in garage)
-            {
-                Console.WriteLine(v.Describe());
-            }
-
-            Console.WriteLine();
-            Console.WriteLine("Note: Car and Truck share the common Vehicle code, but add their own details.");
+            Console.WriteLine(car.Describe());
+            Console.WriteLine(truck.Describe());
         }
     }
 
-    // Base class with common properties and behavior
+    // Base class
     public class Vehicle
     {
         public string Make;
         public string Model;
 
-        public virtual string Describe() => $"Vehicle: {Make} {Model}";
+        public virtual string Describe()
+        {
+            return "Vehicle- Make: "+Make+" Model: "+Model;
+        }
     }
 
     // Derived class - Car
     public class Car : Vehicle
     {
         public int DoorCount;
-        public override string Describe() => $"Car: {Make} {Model} - {DoorCount} doors";
+        public Car(int DoorCount, string Make, string Model)
+        {
+            this.DoorCount = DoorCount;
+            this.Make = Make;
+            this.Model = Model;
+        }
+        public override string Describe()
+        {
+            return "Car- Make: "+Make+" Model: "+Model +"Door:"+ DoorCount;
+        }
     }
 
     // Derived class - Truck
     public class Truck : Vehicle
     {
         public int PayloadKg;
-        public override string Describe() => $"Truck: {Make} {Model} - {PayloadKg} kg payload";
+
+        public Truck(int PayloadKg, string Make, string Model)
+        {
+            this.PayloadKg = PayloadKg;
+            this.Make = Make;
+            this.Model = Model;
+        }
+        public override string Describe()
+        {
+            return "Truck- Make: "+Make+" Model: "+Model +"Payload"+PayloadKg;
+        }
     }
 }

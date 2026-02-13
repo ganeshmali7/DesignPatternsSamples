@@ -2,28 +2,46 @@
 
 namespace DesignPatternsSamples.SOLID
 {
-    // OCP_Followed.cs
-    // Processor depends on abstraction IPaymentMethod; adding new methods means new classes only.
+    // OCP Followed
     public static class OCP_Followed
     {
         public static void Run()
         {
-            Console.WriteLine("OCP Followed — add new payment classes without changing processor");
-            Console.WriteLine("----------------------------------------------------------------");
-
-            IPaymentMethod method = new PaypalPayment();
-            var processor = new PaymentProcessorGood();
-            processor.ProcessPayment(method, 49.95m);
-
-            Console.WriteLine();
-            Console.WriteLine("Good: PaymentProcessorGood is closed for modification, open for extension.");
+            var list = new List<IGreet> { new English(), new Hindi() };
+            Console.WriteLine(Greet("marathi", list));
         }
 
-        // nested abstraction and implementations
-        private interface IPaymentMethod { void Pay(decimal amount); }
-        private class CreditCardPayment : IPaymentMethod { public void Pay(decimal amount) => Console.WriteLine($"Paid {amount} by Credit Card"); }
-        private class PaypalPayment : IPaymentMethod { public void Pay(decimal amount) => Console.WriteLine($"Paid {amount} via PayPal"); }
+        public interface IGreet 
+        { 
+            string Code 
+            { 
+                get; 
+            } 
+            string Say(); 
+        }
+        public class English : IGreet 
+        { 
+            public string Code => "english";
+            public string Say()
+            {
+                return "Hello";
+            }
+        }
+        public class Hindi : IGreet 
+        { 
+            public string Code => "marathi";
+            public string Say()
+            {
+                return "Namaste";
+            }
+        }
 
-        private class PaymentProcessorGood { public void ProcessPayment(IPaymentMethod method, decimal amount) => method.Pay(amount); }
+        public static string Greet(string lang, IEnumerable<IGreet> st)
+        {
+            foreach (var s in st) 
+                if (s.Code == lang) 
+                    return s.Say();
+            return "Hi";
+        }
     }
 }

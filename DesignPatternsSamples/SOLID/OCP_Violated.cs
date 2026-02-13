@@ -2,31 +2,27 @@
 
 namespace DesignPatternsSamples.SOLID
 {
-    // OCP_Violated.cs
-    // Processor uses branching by type -> any new payment requires changing this class.
+    // OCP Violated
+    // In this example if i wants add new language in future then we violates the property of open-closed principle
     public static class OCP_Violated
     {
         public static void Run()
         {
-            Console.WriteLine("OCP Violated — PaymentProcessor uses type checks");
-            Console.WriteLine("-----------------------------------------------");
-
-            var processor = new PaymentProcessorBad();
-            processor.Process(PaymentType.Paypal, 99.99m);
-
-            Console.WriteLine();
-            Console.WriteLine("Problem: to add a new method we must edit PaymentProcessorBad.");
+            var g = new Greet();
+            Console.WriteLine(g.greetings("marathi"));
         }
 
-        private enum PaymentType { CreditCard, Paypal }
-
-        private class PaymentProcessorBad
+        public class Greet
         {
-            public void Process(PaymentType type, decimal amount)
+            public string greetings(string lang)
             {
-                if (type == PaymentType.CreditCard) Console.WriteLine($"Charging {amount} to credit card.");
-                else if (type == PaymentType.Paypal) Console.WriteLine($"Charging {amount} via PayPal.");
+                if (lang == "english") 
+                    return "Hello";
+                else if (lang == "marathi") 
+                    return "Namaste";
+                return "Hi";
             }
         }
+            
     }
 }
