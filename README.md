@@ -1,7 +1,7 @@
 ### 1. DRY (Don't Repeat Yourself)
 
-* **DRY_Violated.cs** — [https://github.com/ganeshmali7/DesignPatternsSamples/blob/main/DesignPatternsSamples/KISSAndDRY/DRY_Violated.cs](https://github.com/ganeshmali7/DesignPatternsSamples/blob/main/DesignPatternsSamples/KISSAndDRY/DRY_Violated.cs)
-* *Shows duplicated code to demonstrate why repetition is bad.*
+* **DRY_Violated.cs** — [https://github.com/ganeshmali7/DesignPatternsSamples/blob/main/DesignPatternsSamples/KISSAndDRY/DRY_Violated.cs](https://github.com/ganeshmali7/DesignPatternsSamples/blob/main/DesignPatternsSamples/KISSAndDRY/DRY_Violated.cs) 
+   *Shows duplicated code to demonstrate why repetition is bad.*
 * **DRY_Followed.cs** — [https://github.com/ganeshmali7/DesignPatternsSamples/blob/main/DesignPatternsSamples/KISSAndDRY/DRY_Followed.cs](https://github.com/ganeshmali7/DesignPatternsSamples/blob/main/DesignPatternsSamples/KISSAndDRY/DRY_Followed.cs)
   *Shows extracting a helper to remove duplication.*
 
