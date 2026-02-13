@@ -1,3 +1,7 @@
+````
+# Simple Demos: DRY, KISS, OOD & SOLID
+````
+
 ### 1. DRY (Don't Repeat Yourself)
 
 * **DRY_Violated.cs** — [https://github.com/ganeshmali7/DesignPatternsSamples/blob/main/DesignPatternsSamples/KISSAndDRY/DRY_Violated.cs](https://github.com/ganeshmali7/DesignPatternsSamples/blob/main/DesignPatternsSamples/KISSAndDRY/DRY_Violated.cs) 
@@ -53,7 +57,3 @@
 * **DIP_Followed.cs** — [https://github.com/ganeshmali7/DesignPatternsSamples/blob/main/DesignPatternsSamples/SOLID/DIP_Followed.cs](https://github.com/ganeshmali7/DesignPatternsSamples/blob/main/DesignPatternsSamples/SOLID/DIP_Followed.cs)
   *DIP followed — depend on abstractions, not concrete implementations.*
 
-
-````
-# Simple Demos: DRY, KISS, OOD & SOLID
-````
