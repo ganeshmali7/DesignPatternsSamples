@@ -11,7 +11,7 @@ namespace DesignPatternsSamples.KISSAndDRY
             double inputF = 86;
             double celsius = ToCelsius(inputF);
 
-            Console.WriteLine($"{inputF}F is equal to {celsius}C");
+            Console.WriteLine(inputF+"F is equal to "+celsius+"C");
         }
 
         // Simple method used to convert the F to C
