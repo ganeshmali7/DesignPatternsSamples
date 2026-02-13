@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using DesignPatternsSamples.KISSAndDRY;
 using DesignPatternsSamples.OOD;
 using DesignPatternsSamples.SOLID;
@@ -49,39 +49,56 @@ namespace DesignPatternsSamples
                 switch (choice)
                 {
                     // DRY
-                    case "1": KISSAndDRY.DRY_Violated.Run(); break;
-                    case "2": KISSAndDRY.DRY_Followed.Run(); break;
+                    case "1": KISSAndDRY.DRY_Violated.Run(); 
+                              break;
+                    case "2": KISSAndDRY.DRY_Followed.Run(); 
+                              break;
                     case "3":
-                        KISSAndDRY.DRY_Violated.Run();
-                        Console.WriteLine();
-                        KISSAndDRY.DRY_Followed.Run();
-                        break;
+                              KISSAndDRY.DRY_Violated.Run();
+                              Console.WriteLine();
+                              KISSAndDRY.DRY_Followed.Run();
+                              break;
 
                     // KISS
-                    case "4": KISSAndDRY.KISS_Violated.Run(); break;
-                    case "5": KISSAndDRY.KISS_Followed.Run(); break;
+                    case "4": KISSAndDRY.KISS_Violated.Run(); 
+                              break;
+                    case "5": KISSAndDRY.KISS_Followed.Run(); 
+                              break;
                     case "6":
-                        KISSAndDRY.KISS_Violated.Run();
-                        Console.WriteLine();
-                        KISSAndDRY.KISS_Followed.Run();
-                        break;
+                              KISSAndDRY.KISS_Violated.Run();
+                              Console.WriteLine();
+                              KISSAndDRY.KISS_Followed.Run();
+                              break;
 
                     // OOD
-                    case "7": EncapsulationExample.Run(); break;
-                    case "8": InheritanceExample.Run(); break;
-                    case "9": PolymorphismExample.Run(); break;
+                    case "7": EncapsulationExample.Run(); 
+                              break;
+                    case "8": InheritanceExample.Run(); 
+                              break;
+                    case "9": PolymorphismExample.Run(); 
+                              break;
 
                     // SOLID
-                    case "10": SRP_Violated.Run(); break;
-                    case "11": SRP_Followed.Run(); break;
-                    case "12": OCP_Violated.Run(); break;
-                    case "13": OCP_Followed.Run(); break;
-                    case "14": LSP_Violated.Run(); break;
-                    case "15": LSP_Followed.Run(); break;
-                    case "16": ISP_Violated.Run(); break;
-                    case "17": ISP_Followed.Run(); break;
-                    case "18": DIP_Violated.Run(); break;
-                    case "19": DIP_Followed.Run(); break;
+                    case "10": SRP_Violated.Run(); 
+                               break;
+                    case "11": SRP_Followed.Run(); 
+                               break;
+                    case "12": OCP_Violated.Run(); 
+                               break;
+                    case "13": OCP_Followed.Run();
+                               break;
+                    case "14": LSP_Violated.Run(); 
+                               break;
+                    case "15": LSP_Followed.Run(); 
+                               break;
+                    case "16": ISP_Violated.Run(); 
+                               break;
+                    case "17": ISP_Followed.Run(); 
+                               break;
+                    case "18": DIP_Violated.Run();
+                               break;
+                    case "19": DIP_Followed.Run(); 
+                               break;
 
                     case "0": return;
                     default:
